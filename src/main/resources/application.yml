@@ -1,0 +1,23 @@
+server:
+  port: 8888
+  tomcat:
+    connection-timeout: 2s
+    keep-alive-timeout: 15s
+    threads:
+      max: 50
+      min-spare: 5
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          # when access public!
+          uri: https://github.com/jprie/config-repo.git
+          default-label: main
+          timeout: 5
+          force-pull: true
+          clone-on-start: true
+#          basedir:
