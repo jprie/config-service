@@ -31,7 +31,7 @@ management:
   endpoint:
     health:
       probes:
-        enabled:
+        enabled: true
       show-details: always
       show-components: always
 #          basedir:
