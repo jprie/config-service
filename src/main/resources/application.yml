@@ -23,4 +23,15 @@ spring:
           timeout: 5
           force-pull: true
           clone-on-start: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      probes:
+        enabled:
+      show-details: always
+      show-components: always
 #          basedir:
