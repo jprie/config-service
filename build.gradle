@@ -30,12 +30,16 @@ repositories {
 
 ext {
 	set('springCloudVersion', "2023.0.0")
+	set('otelVersion', "1.32.0")
 }
 
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-config-server'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	runtimeOnly "io.opentelemetry.javaagent:opentelemetry-javaagent:${otelVersion}"
+
+
 }
 
 dependencyManagement {
